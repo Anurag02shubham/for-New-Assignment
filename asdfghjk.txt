@@ -1,0 +1,82 @@
+1 Write a Test Plan on a page?
+>>Analyze the product.
+>>Design the Test Strategy.
+>>Define the Test Objectives.
+>>Define Test Criteria.
+>>Resource Planning.
+>>Plan Test Environment.
+>>Schedule & Estimation.
+>>Determine Test Deliverables.
+For Above determination Help people outside the test team such as developers, business managers, customers understand the details of testing.
+Test Plan guides our thinking. It is like a rule book, which needs to be followed.
+Important aspects like test estimation, test scope, Test Strategy are documented in Test Plan, so it can be reviewed by Management Team and re-used for other projects.
+
+
+2. Automate tests for the following, (and any additional tests) to validate the Quotation to a registered Insurance customer:
+a)Login failure
+if username or passward are wrong then user system should give invalid username
+for Example i am opening the insurance portal for Cx propective or Cx uses:
+username should be the cx valid email id and passward contails eight character first capital letter ,and seven should be any digit or symbol 
+By using cypress tools:
+cantains("insurance login page) 
+it('login page',{
+cy.visit('https//automateinsuranceportal.com')
+cy.get('.login').click()
+cy.get('#email').type('anurag@gmail.com')
+cy.get('#passward').type('anurag@123')              >> current passward is Shubham@123
+cy.get(#SubmitLogin>span').click()
+}}
+Note As i am passing worong passward login page get failed.
+
+b)login success
+
+cantains("insurance login page) 
+it('login page',{
+cy.visit('https//automateinsuranceportal.com')
+cy.get('.login').click()
+cy.get('#email').type('anurag@gmail.com')
+cy.get('#passward').type('shubham@123')              >> correct passward is Shubham@123
+cy.get(#SubmitLogin>span').click()
+}}
+
+After opening the login page there is profile option /Account details option
+c) Profile
+cy.tittle().should('include','myprofile')
+cy.tittle().should('include','myAccount')
+
+d)Edit profile
+
+Check all the field values are displayed on the respective fields of the edit page.
+
+cy.tittle().should('include','editProfile')
+cy.get('.editProfile').click()
+cy.edit(.Cxgender).click()
+cy.get('#gender').type('male')
+cy.get(#save).click()
+
+e)Logout 
+
+cy.get('.logout).click()        >> if i am passing incorrect value then Error will come
+
+
+
+Limitations/Test Boundaries:
+
+Minimum value.
+Just above the minimum.
+Nominal Value.
+Just below Max value.
+Max value.
+Above are possiblities to check the limitation or test boundaries 
+
+Thanks
+ 
+
+
+
+
+
+ 
+
+
+
